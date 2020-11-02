@@ -4,10 +4,11 @@ angular.module('chatapp').config(['$locationProvider', '$routeProvider',routeRes
 
 function routeResolver($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
+  // http://localhost:8000/#!/chat
   $routeProvider
       .when('/chat',
         {
-          templateUrl: 'pages/chat.html',
+          templateUrl: 'pages/chat/chat.html',
           controller: 'chatController',
         }
       )
